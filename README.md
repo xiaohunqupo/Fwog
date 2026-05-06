@@ -1,7 +1,5 @@
 # Fwog
 
-![Fwog logo](media/logo.png)
-
 [![Docs](https://img.shields.io/readthedocs/fwog?style=for-the-badge)](https://fwog.readthedocs.io) [![CI](https://img.shields.io/github/actions/workflow/status/juandiegomontoya/fwog/cmake.yml?branch=main&style=for-the-badge)](https://github.com/juandiegomontoya/fwog/actions/workflows/cmake.yml)
 
 ## Froggy OpenGL Engoodener
@@ -29,7 +27,6 @@ Fwog is interested in providing an abstraction of a *subset* of OpenGL. That mea
   - Alternative: storage buffers
 - Hardware occlusion queries
   - Alternative: storage buffer + fence + readback
-- SPIR-V shaders
 - ...and probably many more features are not exposed
 
 If an issue is raised about a missing feature, I might add it. If a PR is made that implements it, I will probably merge it.
@@ -37,8 +34,6 @@ If an issue is raised about a missing feature, I might add it. If a PR is made t
 ## Future Features
 
 Fwog is essentially feature-complete, but there are some smaller things that need attention. See [the issues](https://github.com/JuanDiegoMontoya/Fwog/issues) for features that are being considered or worked on.
-
-Bear in mind that the API is regularly broken as improvements are made. Consult the releases page for stable-r releases.
 
 ## Getting Started
 
@@ -128,6 +123,10 @@ Fwog natively supports a number of ubiquitous extensions:
 - `GL_EXT_texture_compression_s3tc`
 - `GL_EXT_texture_sRGB`
 - `GL_KHR_shader_subgroup`
+
+## C++ shaders
+
+Fwog provides experimental support for [vcc](https://shady-gang.github.io/vcc/), which allows writing shaders in standard C and C++. `FWOG_VCC_ENABLE` must be set to true to use this feature, and an appropriate version of LLVM must be installed.
 
 ## Directory Structure
 
