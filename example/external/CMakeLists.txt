@@ -8,13 +8,13 @@ option(GLFW_BUILD_EXAMPLES "" OFF)
 FetchContent_Declare(
     glfw
     GIT_REPOSITORY https://github.com/glfw/glfw
-    GIT_TAG        3.3.2
+    GIT_TAG        3.4
 )
 
 FetchContent_Declare(
     glm
     GIT_REPOSITORY https://github.com/g-truc/glm
-    GIT_TAG        cc98465e3508535ba8c7f6208df934c156a018dc
+    GIT_TAG        1.0.3
 )
 
 FetchContent_Declare(
@@ -38,7 +38,7 @@ option(KTX_FEATURE_TOOLS "" OFF)
 FetchContent_Declare(
     ktx
     GIT_REPOSITORY https://github.com/KhronosGroup/KTX-Software.git
-    GIT_TAG        v4.1.0
+    GIT_TAG        v4.4.2
 )
 
 if(FWOG_FSR2_ENABLE)
@@ -51,7 +51,7 @@ if(FWOG_FSR2_ENABLE)
     FetchContent_Declare(
         fsr2
         GIT_REPOSITORY https://github.com/JuanDiegoMontoya/FidelityFX-FSR2.git
-        GIT_TAG        a5d60a6f581182166dbb5fac89b77212e028ea91
+        GIT_TAG        7fb8c92d18e300b84975f2f609b58713b8bde4a7
         GIT_SUBMODULES ""
     )
     FetchContent_MakeAvailable(fsr2)

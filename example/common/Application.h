@@ -6,6 +6,7 @@
 #include <string>
 #include <utility>
 
+#define GLM_ENABLE_EXPERIMENTAL
 #include <glm/fwd.hpp>
 #include <glm/vec3.hpp>
 

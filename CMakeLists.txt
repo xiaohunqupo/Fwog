@@ -1,6 +1,6 @@
 # the project's main CMakeLists file
 
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.5)
 
 project(Fwog)
 

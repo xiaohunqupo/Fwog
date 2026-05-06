@@ -439,10 +439,13 @@ void GltfViewerApplication::OnWindowResize(uint32_t newWidth, uint32_t newHeight
       .fpMessage =
         [](FfxFsr2MsgType type, const wchar_t* message)
       {
-        char cstr[256] = {};
-        wcstombs_s(nullptr, cstr, sizeof(cstr), message, sizeof(cstr));
-        cstr[255] = '\0';
-        printf("FSR 2 message (type=%d): %s\n", type, cstr);
+        if (type == FFX_FSR2_MESSAGE_TYPE_ERROR)
+        {
+          char cstr[256] = {};
+          wcstombs_s(nullptr, cstr, sizeof(cstr), message, sizeof(cstr));
+          cstr[255] = '\0';
+          printf("FSR 2 message (type=%d): %s\n", type, cstr);
+        }
       },
     };
     fsr2ScratchMemory = std::make_unique<char[]>(ffxFsr2GetScratchMemorySizeGL());
